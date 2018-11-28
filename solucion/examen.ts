@@ -169,7 +169,29 @@ obtenerData().then(
 // ```
 //
 // ## 8)  Revisar si todos los personajes han usado vehicles.
-//
+
+obtenerData().then(
+    function (contenidoDelArchivo) {
+        console.log('\n\n8) Revisar si todos los personajes han usado vehicles.');
+        const bbd = JSON.parse(contenidoDelArchivo);
+        let todosPersnajesAuto=true;
+        bbd.forEach(
+            (valorNuevo) => {
+                if(valorNuevo.vehicles!==undefined){
+                    todosPersnajesAuto = false;
+                }
+            }
+        )
+        if(todosPersnajesAuto){
+            console.log('Todos tiene auto');
+        }else{
+            console.log('No todos tiene auto');
+        }
+
+
+    }
+)
+
 // ## 9) Revisar si todos los personajes han usado starships.
 //
 // ## 10) Calcular en cuantos films han aparecido cada personaje:

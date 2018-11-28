@@ -115,7 +115,22 @@ obtenerData().then(function (contenidoDelArchivo) {
 // ```
 //
 // ## 8)  Revisar si todos los personajes han usado vehicles.
-//
+obtenerData().then(function (contenidoDelArchivo) {
+    console.log('\n\n8) Revisar si todos los personajes han usado vehicles.');
+    var bbd = JSON.parse(contenidoDelArchivo);
+    var todosPersnajesAuto = true;
+    bbd.forEach(function (valorNuevo) {
+        if (valorNuevo.vehicles !== undefined) {
+            todosPersnajesAuto = false;
+        }
+    });
+    if (todosPersnajesAuto) {
+        console.log('Todos tiene auto');
+    }
+    else {
+        console.log('No todos tiene auto');
+    }
+});
 // ## 9) Revisar si todos los personajes han usado starships.
 //
 // ## 10) Calcular en cuantos films han aparecido cada personaje:
