@@ -133,7 +133,7 @@ obtenerData().then(function (contenidoDelArchivo) {
 });
 // ## 9) Revisar si todos los personajes han usado starships.
 obtenerData().then(function (contenidoDelArchivo) {
-    console.log('\n\n8) Revisar si todos los personajes han usado starships.');
+    console.log('\n\n9) Revisar si todos los personajes han usado starships.');
     var bbd = JSON.parse(contenidoDelArchivo);
     var todosPersnajesAuto = true;
     bbd.forEach(function (valorNuevo) {

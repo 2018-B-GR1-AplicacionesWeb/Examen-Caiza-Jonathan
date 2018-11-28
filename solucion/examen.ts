@@ -195,7 +195,7 @@ obtenerData().then(
 // ## 9) Revisar si todos los personajes han usado starships.
 obtenerData().then(
     function (contenidoDelArchivo) {
-        console.log('\n\n8) Revisar si todos los personajes han usado starships.');
+        console.log('\n\n9) Revisar si todos los personajes han usado starships.');
         const bbd = JSON.parse(contenidoDelArchivo);
         let todosPersnajesAuto=true;
         bbd.forEach(
