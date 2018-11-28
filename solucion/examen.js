@@ -132,7 +132,22 @@ obtenerData().then(function (contenidoDelArchivo) {
     }
 });
 // ## 9) Revisar si todos los personajes han usado starships.
-//
+obtenerData().then(function (contenidoDelArchivo) {
+    console.log('\n\n8) Revisar si todos los personajes han usado starships.');
+    var bbd = JSON.parse(contenidoDelArchivo);
+    var todosPersnajesAuto = true;
+    bbd.forEach(function (valorNuevo) {
+        if (valorNuevo.starships !== undefined) {
+            todosPersnajesAuto = false;
+        }
+    });
+    if (todosPersnajesAuto) {
+        console.log('Todos tiene starships');
+    }
+    else {
+        console.log('No todos tiene starships');
+    }
+});
 // ## 10) Calcular en cuantos films han aparecido cada personaje:
 //
 //     Ej:
